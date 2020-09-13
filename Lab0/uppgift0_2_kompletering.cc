@@ -1,19 +1,41 @@
 //####
 //2-11 Inkludera samtliga kodbibliotek som används i filen.
+//SVAR: La till #include <string>
 #include <iostream>
 #include <iomanip>
+#include <string>
 using namespace std;
 
 //####
 //8-8 Koden uppfyller inte specifikationen.
 //Beräkningar ska genomföras i funktioner som anropas av huvudprogrammet.
+    //SVAR: Har nu ändrat så alla beräkningar görs genom funktioner
+
+//Omvandlar celcius till kelvin
+float to_kelvin(int celcius)
+{
+    float kelvin = celcius + 273.15;
+    return kelvin;
+}
+
+//Omvandlar celcius till farenheit
+float to_farenheit(int celcius)
+{
+    float farenheit = celcius * 9.00/5 + 32;
+    return farenheit;
+}
+
+//Omvandlar celcius till réamur
+float to_reaumur(int celcius)
+{
+    float reaumur = celcius * 4.00/5;
+    return reaumur;
+}
+
 int main()
 {
     int startvarde;
     int slutvarde;
-    float kelvin;
-    float farenheit;
-    float reaumur;
 
     cout << "Ange startvärde: " << flush;
 
@@ -38,7 +60,7 @@ int main()
 
         cout << "Ange slutvärde: " << flush;
 
-      //Kolla om sluttemp är ett heltal och varmare än starttemp
+    //Kolla om sluttemp är ett heltal och varmare än starttemp
     while (!(cin >> slutvarde) || startvarde >= slutvarde)
     {
         if (!(slutvarde))
@@ -53,31 +75,34 @@ int main()
         cin.clear();
         cin.ignore(1000, '\n');
       }
-    // Översta raderna i tabellen
-    cout << setw(12) << setfill(' ') << left << "Celsius" << flush;
-    cout << setw(8)  << setfill(' ') << left << "Kelvin" << flush;
-    cout << setw(13) << setfill(' ') << left << "Farenheit" << flush;
-    cout << setw(7)  << setfill(' ') << left << "Réaumur" << endl;
-    cout << setw(40) << setfill('-') << '-'  << endl;
 
-    // Temperaturvärden i tabellen
+    // Bestämmer konstanta manipulatorer
+    cout << setfill(' ') << left;
+    // Översta raderna i tabellen
+    cout << setw(12) << "Celsius" << flush;
+    cout << setw(8)  << "Kelvin" << flush;
+    cout << setw(13) << "Farenheit" << flush;
+    cout << setw(7)  << "Réaumur" << endl;
+    cout << setw(40) << setfill('-') << '-' << endl;
+
+
+    //Bestämmer alla konstanta manipulatorer
+    cout << fixed << setprecision(2) << setfill(' ') << right << flush;
+
+    //Temperaturvärden i tabellen
     for (int i{startvarde}; i <= slutvarde; ++i)
     {
-        //Beräka de olika temperaturerna
-        kelvin    = i + 273.15;
-        farenheit = i * 9.00/5 + 32;
-        reaumur   = i * 4.00/5;
 
         // Rad i tabellen
 	//####
         //4-3 Upprepa inte manipulatorer som gäller tills vidare.
-        cout << setw(7)  << setfill(' ') << right << i << flush;
-        cout << setw(11) << setfill(' ') << fixed << setprecision(2)
-                                         << right << kelvin << flush;
-        cout << setw(11) << setfill(' ') << fixed << setprecision(2)
-                                         << right << farenheit << flush;
-        cout << setw(11) << setfill(' ') << fixed << setprecision(2)
-                                         << right << reaumur << endl;
+            //SVAR: Ändrade så det finns en cout innan for-loopen
+            //där alla konstanta manipulatorer bestäms.
+            //Gjorde detta på de första två raderna också
+        cout << setw(7) << i << flush;
+        cout << setw(11) << to_kelvin(i) << flush;
+        cout << setw(11) << to_farenheit(i) << flush;
+        cout << setw(11) << to_reaumur(i) << endl;
     }
 
     return 0;
