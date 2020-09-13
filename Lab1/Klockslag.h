@@ -3,11 +3,12 @@
 
 #include <string>
 
-Class Klockslag
+class Klockslag
 {
 public:
-  Klockslag(int sec, int min, int h); //Konstruktor
+  klockslag(int sec, int min, int h); //Konstruktor
 
+  bool is_valid();
   std::string get_time();
 
 private:
