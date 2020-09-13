@@ -11,7 +11,7 @@ int main()
     float farenheit;
     float reaumur;
 
-    cout << "Ange startvärde: " << flush;
+    cout << "ANGE STARTVÄRDE: " << flush;
 
     //Kolla om starttemp är ett heltal och varmare än den absoluta nollpunkten
     while (!(cin >> startvarde) || startvarde <= -274)
