@@ -12,77 +12,78 @@ int main()
     //####
     //2-2 - Engelska i kod.
     //#svar# Ändrat variabelnamn
-  	//Deklarera variabler
-  	int integer{0};
-  	string text{" "};
-  	char character{' '};
-  	float floatnumber{0.0};
+    //Deklarera variabler
+    int integer{0};
+    string text{" "};
+    char character{' '};
+    float floatnumber{0.0};
 
-  	//Första delen
-  	cout << "Skriv in ett heltal: " << flush;
-  	cin >> integer;
-  	cout << "Du skrev in heltalet: ";
-  	cout << integer << '\n' << endl;
+    //Första delen
+    cout << "Skriv in ett heltal: " << flush;
+    cin >> integer;
+    cout << "Du skrev in heltalet: ";
+    cout << integer << '\n' << endl;
 
-  	//Nollställ cin, görs mellan alla delar
-  	cin.clear();
-  	cin.ignore(1000, '\n');
+    //Nollställ cin, görs mellan alla delar
+    cin.clear();
+    cin.ignore(1000, '\n');
 
-  	//Andra delen
-  	cout << "Skriv in fem  heltal: " << flush;
-  	cin >> integer;
-   	cout << "Du skrev in heltalen: ";
-	//#### 1-7 Undvik onödiga tomrader.
+    //Andra delen
+    cout << "Skriv in fem  heltal: " << flush;
+    cin >> integer;
+    cout << "Du skrev in heltalen: ";
+    //#### 1-7 Undvik onödiga tomrader.
     //#svar# Tyckte det blev tydligare, men var felaktigt
-  	cout << integer << ' ';
-  	cin >> integer;
-  	cout << integer << ' ';
-  	cin >> integer;
-  	cout << integer << ' ';
-  	cin >> integer;
-  	cout << integer << ' ';
-  	cin >> integer;
-  	cout << integer << '\n' << endl;
+    cout << integer << ' ';
+    cin >> integer;
+    cout << integer << ' ';
+    cin >> integer;
+    cout << integer << ' ';
+    cin >> integer;
+    cout << integer << ' ';
+    cin >> integer;
+    cout << integer << '\n' << endl;
 
-  	cin.clear();
-  	cin.ignore(1000, '\n');
+    cin.clear();	
+    cin.ignore(1000, '\n');
 
-  	//Tredje delen
-  	cout << "Skriv in ett heltal och ett flyttal: " << flush;
-  	cin >> integer >> floatnumber;
-  	cout << "Du skrev in heltalet: " << flush;
-  	cout << setw(10) << integer << endl;
-  	cout << "Du skrev in flyttalet: " << flush;
-  	cout << setw(9) << fixed << setprecision(4) << floatnumber << '\n' << endl;
+    //Tredje delen
+    cout << "Skriv in ett heltal och ett flyttal: " << flush;
+    cin >> integer >> floatnumber;
+    cout << "Du skrev in heltalet: " << flush;
+    cout << setw(10) << integer << endl;
+    cout << "Du skrev in flyttalet: " << flush;
+    cout << setw(9) << fixed << setprecision(4) << floatnumber << '\n' << endl;
+	
+    cin.clear();
+    cin.ignore(1000, '\n');
 
-	cin.clear();
-	cin.ignore(1000, '\n');
-
-	//Fjärde delen
-	//####
-	//1-3 Använd konsekvent indenteringsstil.
+    //Fjärde delen
+    //####
+    //1-3 Använd konsekvent indenteringsstil.
     //#svar# Tror det blev fel pga textredigeringsprogrammet,
-    //har ändrat inställningarna så det borde vara rätt.
+    //såg rätt ut i atom, men i GitHub ser det fel ut.
+    //Har ändrat så det är rätt enligt GitHub
     cout << "Skriv in ett flyttal och ett heltal: " << flush;
-	cin >> floatnumber >> integer;
-	cout << "Du skrev in heltalet:" << flush;
+    cin >> floatnumber >> integer;
+    cout << "Du skrev in heltalet:" << flush;
     cout << setw(11) << setfill('-') << integer << endl;
-  	cout << "Du skrev in flyttalet:" << flush;
-	//####
+    cout << "Du skrev in flyttalet:" << flush;
+    //####
     //4-3 Upprepa inte manipulatorer som gäller tills vidare.
     //#svar#Tog bort extra << setfill('-') << fixed << setprecision(4)
-  	cout << setw(10)  << floatnumber << '\n' <<  endl;
-	//####
+    cout << setw(10)  << floatnumber << '\n' <<  endl;
+    //####
     //1-4 Radbryt långa rader på lämpligaste sätt.
     //#svar# oklart vad lämpligast är, men tror de är rätt
 
-  	cin.clear();
-  	cin.ignore(1000, '\n');
+    cin.clear();
+    cin.ignore(1000, '\n');
 
-	//Femte delen
-	cout << "Skriv in ett tecken: " << flush;
-  	cin >> character;
-  	cout << "Du skrev in tecknet: " << character << '\n' << endl;
+    //Femte delen
+    cout << "Skriv in ett tecken: " << flush;
+    cin >> character;
+    cout << "Du skrev in tecknet: " << character << '\n' << endl;
 
     cin.clear();
     cin.ignore(1000, '\n');
