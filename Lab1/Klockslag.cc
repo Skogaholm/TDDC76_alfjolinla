@@ -9,3 +9,18 @@ int main()
     hours{h}
 
 }
+
+Klockslag::is_valid()
+{
+    bool is_true{true}
+
+    if (   0 >= hours   || hour >= 23
+        || 0 >= minutes || minutes >= 59
+        || !(0<=seconds<=59))
+    {
+        is_true = false;
+    }
+
+
+    return is_true;
+}
