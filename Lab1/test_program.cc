@@ -1,6 +1,6 @@
 //Detta säger åt Catch att skapa en main() - gör bara detta i en .cc-fil.
 //Behöver inte vara med om test_main.cc använts
-#define CATCH_CONFIG_MAIN
+// #define CATCH_CONFIG_MAIN
 
 //Här inkluderar vi alla de verktyg vi använder i Catch.
 //Detta biblioteket är stort och tar tid att kompilera.

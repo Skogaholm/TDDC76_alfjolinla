@@ -1,6 +1,7 @@
 #ifndef KLOCKSLAG_H
 #define KLOCKSLAG_H
 
+
 #include <string>
 
 class Klockslag
