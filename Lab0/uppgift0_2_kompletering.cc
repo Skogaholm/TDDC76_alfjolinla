@@ -9,28 +9,16 @@ using namespace std;
 //####
 //8-8 Koden uppfyller inte specifikationen.
 //Beräkningar ska genomföras i funktioner som anropas av huvudprogrammet.
-    //SVAR: Har nu ändrat så alla beräkningar görs genom funktioner
+//SVAR: Har nu ändrat så alla beräkningar görs genom funktioner
 
 //Omvandlar celcius till kelvin
-float to_kelvin(int celcius)
-{
-    float kelvin = celcius + 273.15;
-    return kelvin;
-}
+float to_kelvin(int celcius);
 
 //Omvandlar celcius till farenheit
-float to_farenheit(int celcius)
-{
-    float farenheit = celcius * 9.00/5 + 32;
-    return farenheit;
-}
+float to_farenheit(int celcius);
 
 //Omvandlar celcius till réamur
-float to_reaumur(int celcius)
-{
-    float reaumur = celcius * 4.00/5;
-    return reaumur;
-}
+float to_reaumur(int celcius);
 
 int main()
 {
@@ -55,10 +43,10 @@ int main()
         cin.ignore(1000, '\n');
     }
 
-        cin.clear();
-        cin.ignore(1000, '\n');
+    cin.clear();
+    cin.ignore(1000, '\n');
 
-        cout << "Ange slutvärde: " << flush;
+    cout << "Ange slutvärde: " << flush;
 
     //Kolla om sluttemp är ett heltal och varmare än starttemp
     while (!(cin >> slutvarde) || startvarde >= slutvarde)
@@ -74,7 +62,7 @@ int main()
         cout << "Ange nytt slutvärde: " << flush;
         cin.clear();
         cin.ignore(1000, '\n');
-      }
+    }
 
     // Bestämmer konstanta manipulatorer
     cout << setfill(' ') << left;
@@ -96,9 +84,9 @@ int main()
         // Rad i tabellen
 	//####
         //4-3 Upprepa inte manipulatorer som gäller tills vidare.
-            //SVAR: Ändrade så det finns en cout innan for-loopen
-            //där alla konstanta manipulatorer bestäms.
-            //Gjorde detta på de första två raderna också
+        //SVAR: Ändrade så det finns en cout innan for-loopen
+        //där alla konstanta manipulatorer bestäms.
+        //Gjorde detta på de första två raderna också
         cout << setw(7) << i << flush;
         cout << setw(11) << to_kelvin(i) << flush;
         cout << setw(11) << to_farenheit(i) << flush;
@@ -106,4 +94,24 @@ int main()
     }
 
     return 0;
+}
+
+//Omvandlar celcius till kelvin
+float to_kelvin(int celcius)
+{
+    float kelvin = celcius + 273.15;
+    return kelvin;
+}
+
+//Omvandlar celcius till farenheit
+float to_farenheit(int celcius)
+{
+    float farenheit = celcius * 9.00/5 + 32;
+    return farenheit;
+}
+
+float to_reaumur(int celcius)
+{
+    float reaumur = celcius * 4.00/5;
+    return reaumur;
 }
