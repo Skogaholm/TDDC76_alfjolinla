@@ -6,7 +6,7 @@
 class Klockslag
 {
 public:
-  klockslag(int sec, int min, int h); //Konstruktor
+  Klockslag(int sec, int min, int h); //Konstruktor
 
   bool is_valid();
   std::string get_time();
