@@ -26,6 +26,13 @@ Clockwork time{1, 2, 3};
 //Exempel: int x{3};
 CHECK(time.is_valid() == true);
 CHECK(time.get_time() == "1:2:3");
+CHECK(time.am_or_pm() == "1:2:3 am");
+
+Clockwork time1{0, 2, 3};
+CHECK(time1.am_or_pm() == "12:2:3 am");
+
+Clockwork time2{13, 2, 3};
+CHECK(time2.am_or_pm() == "1:2:3 pm");
 
 //Följande är olika test.
 //Blir villkoret i CHECK(villkor) sant kommer testet indikeras som godkänt.

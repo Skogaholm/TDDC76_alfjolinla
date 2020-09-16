@@ -13,9 +13,9 @@ Clockwork::Clockwork(int h, int min, int sec)
 bool Clockwork::is_valid()
 {
     bool is_true{true};
-    if (!(0 <= hours <= 23)
-    ||  !(0 <= minutes <= 59)
-    ||  !(0 <= seconds <= 59))
+    if (!(0 <= hours && hours <= 23)
+    ||  !(0 <= minutes && minutes <= 59)
+    ||  !(0 <= seconds && seconds <= 59))
     {
         is_true = false;
     }
@@ -23,9 +23,10 @@ bool Clockwork::is_valid()
     return is_true;
 }
 
-std::string Clockwork::get_time(int new_h=hours);
+std::string Clockwork::get_time()
 {
-    std::string result = std::to_string(new_h)
+
+    std::string result = std::to_string(hours)
         + ':' + std::to_string(minutes)
         + ':' + std::to_string(seconds);
     return result;
@@ -33,22 +34,29 @@ std::string Clockwork::get_time(int new_h=hours);
 
 std::string Clockwork::am_or_pm()
 {
-    if (0 <= hours <= 11)
+    std::string result;
+    if (0 <= hours && hours <= 11)
     {
         if (hours == 0)
         {
-            result = get_time(hours+12);
+            result = std::to_string(hours+12)
+                + ':' + std::to_string(minutes)
+                + ':' + std::to_string(seconds);
             result += " am";
         }
         else
         {
-            result = get_time(hours-12);
+            result = std::to_string(hours)
+                + ':' + std::to_string(minutes)
+                + ':' + std::to_string(seconds);
             result += " am";
         }
     }
     else
     {
-        result = get_time(hours-12);
+        result = std::to_string(hours-12)
+            + ':' + std::to_string(minutes)
+            + ':' + std::to_string(seconds);
         result += " pm";
     }
     return result;
