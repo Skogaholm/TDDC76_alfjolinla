@@ -36,19 +36,21 @@ std::string Klockslag::get_time(bool am_pm);
         if (0 <= hours <= 12)
         {
             result = get_time(false);
-            result += "am";
+            result += " am";
         }
         else
         {
-            result = get_time(false); //ändra timmar
-            result += "pm";
+            result =        std::to_string(hours-12)
+                    + ':' + std::to_string(minutes)
+                    + ':' + std::to_string(seconds);
+            result += " pm";
         }
     }
     else
     {
-        std::string result = std::to_string(hours)
-                     + ':' + std::to_string(minutes)
-                     + ':' + std::to_string(seconds);
+        result =        std::to_string(hours)
+                + ':' + std::to_string(minutes)
+                + ':' + std::to_string(seconds);
     }
 
     return result;
