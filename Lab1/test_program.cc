@@ -8,7 +8,7 @@
 
 //Här kan vi också inkludera .h-filerna för de funktioner,
 //klasser, m.m., som vi vill testa.
-#include "Klockslag.h"
+#include "Clockwork.h"
 //Vanligtvis brukar vi inte definiera de program som vi vill testa
 //i samma fil som testprogrammet. Detta är bara för att ge ett
 //fungerande exempel av en funktion som vi kan testa.

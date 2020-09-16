@@ -1,8 +1,8 @@
-#include "Klockslag.h"
+#include "Clockwork.h"
 
 int main()
 {
-    Klockslag time{15, 38, 26};
+    Clockwork time{15, 38, 26};
     time.is_valid();
     return 0;
 }
