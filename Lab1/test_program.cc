@@ -21,10 +21,11 @@
 //exempelvis flera tester för en funktion.
 TEST_CASE( "Sum of ints") {
 
-Klockslag time{15, 25, 37};
+Clockwork time{1, 2, 3};
 //Här kan vi deklarera variabler som vi vill använda i tester.
 //Exempel: int x{3};
 CHECK(time.is_valid() == true);
+CHECK(time.get_time() == "1:2:3");
 
 //Följande är olika test.
 //Blir villkoret i CHECK(villkor) sant kommer testet indikeras som godkänt.
