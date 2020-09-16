@@ -28,10 +28,28 @@ bool Klockslag::is_valid()
     return is_true;
 }
 
-std::string Klockslag::get_time();
+std::string Klockslag::get_time(bool am_pm);
 {
-    std::string result = std::to_string(hours)
-                 + ':' + std::to_string(minutes)
-                 + ':' + std::to_string(seconds);
+    std::result
+    if (am_pm == true)
+    {
+        if (0 <= hours <= 12)
+        {
+            result = get_time(false);
+            result += "am";
+        }
+        else
+        {
+            result = get_time(false); //ändra timmar
+            result += "pm";
+        }
+    }
+    else
+    {
+        std::string result = std::to_string(hours)
+                     + ':' + std::to_string(minutes)
+                     + ':' + std::to_string(seconds);
+    }
+
     return result;
 }
