@@ -4,10 +4,10 @@
 
 #include <string>
 
-class Klockslag
+class Clockwork
 {
 public:
-  Klockslag(int h, int min, int sec); //Konstruktor
+  Clockwork(int h, int min, int sec); //Konstruktor
 
   bool is_valid();
   std::string get_time();
