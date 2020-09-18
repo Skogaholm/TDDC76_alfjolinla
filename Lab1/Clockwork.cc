@@ -8,7 +8,7 @@ Clockwork::Clockwork(int h, int min, int sec)
 {
 
 }
-
+//Testing om gitlab fungerar
 
 bool Clockwork::is_valid()
 {
